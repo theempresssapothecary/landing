@@ -58,7 +58,6 @@
     .heading { font-size: 48px; margin: 0 0 30px; color: #fff; font-weight: 700; letter-spacing: -1.5px}
 
 /* Text */
-    p { font-size: 16px; color: #fff; }
     .description { font-size: 24px; line-height: 1.75rem; margin: 0 0 24px 0; color: #fff; }
 
 /* BTN */
@@ -96,13 +95,11 @@
 /* Wrapper Position */
     #center-box {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: perspective(1px) translateY(-50%) translateX(-50%);
       text-align: center;
-      width: 500px;
-      max-width: 500px;
-      min-height: 640px;
+      left: 50%;
+      top: 50%;
+      width: 500px; margin-left: -250px;
+      height: 440px; margin-top: -220px;
       background: transparent;
       border: 0px solid;
       padding: 30px 15px;
@@ -111,15 +108,11 @@
       }
       #main { margin-bottom: 54px; }
 
-      @media (max-width: 767px), (max-height: 640px){
+      @media (max-width: 767px) {
         #center-box {
-          position: relative;
-          top: 0;
+          width: 100%; margin-left: 0;
+          height: 280px; margin-top: -140px;
           left: 0;
-          margin: auto;
-          transform: perspective(1px) translateY(0) translateX(0);
-          width: 100%;
-          min-height: 540px;
           padding: 18px 15px;
           border: 0;
         }
@@ -192,39 +185,27 @@
       -o-animation-name: fadeInUp;
       animation-name: fadeInUp;
       }
-      .form * { font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
-      .form input, .form button { border-radius: 0 !important; border: 0 !important; text-align: center !important; }
-      .form-input-error-message { color: #fff !important; font-style: normal !important; margin: 0 !important; background: rgb(216, 0, 12) !important; font-weight: 600 !important; text-shadow: none !important;}
-      .landing-page-form-message p { font-size: 20px; font-weight: 600; text-align: center !important; }
   </style>
 </head>
 
 <body>
   <div id="master-wrap">
 
-    <div id="center-box">
-      <div class="center-box-inner">
+    <div id="center-box" class="animated fadeInUp">
 
-        <div id="main">
-          <h1 class="heading">The Empress's Apothecary</h1>
-          <p class="description">Our New Website is Coming Soon.</p>
-          <div class="form" data-mooform-id="06d84eb9-2d46-42b5-95f4-4eef91d1c322" ></div>
-          <p>Please join the Empress's tribe below, so we can notify you when our website launches and to get incentives for being amazing!</p>
+      <div id="main">
+        <h1 class="heading">The Empress's Apothecary</h1>
+        <p class="description">Our New Website is Coming Soon.</p>
+      </div>
+
+      <div id="footer">
+        <img class="logo" src="assets/logo@2x.png" alt="The Empress's Apothecary" />
+        <div class="contact-info">
         </div>
-
-        <div id="footer">
-          <img class="logo" src="assets/logo@2x.png" alt="The Empress's Apothecary" />
-          <div class="contact-info">
-          </div>
-          <p class="copyright">&copy; 2020 The Empress's Apothecary.</p>
-        </div>
-
+        <p class="copyright">&copy; 2020 The Empress's Apothecary.</p>
       </div>
     </div><!-- /#logo-box -->
 
   </div><!-- /#master-wrap -->
-<script>
-  if(!window.mootrack){ !function(t,n,e,o,a){function d(t){var n=~~(Date.now()/3e5),o=document.createElement(e);o.async=!0,o.src=t+"?ts="+n;var a=document.getElementsByTagName(e)[0];a.parentNode.insertBefore(o,a)}t.MooTrackerObject=a,t[a]=t[a]||function(){return t[a].q?void t[a].q.push(arguments):void(t[a].q=[arguments])},window.attachEvent?window.attachEvent("onload",d.bind(this,o)):window.addEventListener("load",d.bind(this,o),!1)}(window,document,"script","https://cdn.stat-track.com/statics/moosend-tracking.min.js","mootrack"); } mootrack('loadForm', '06d84eb92d4642b595f44eef91d1c322');
-</script>
 </body>
 </html>
